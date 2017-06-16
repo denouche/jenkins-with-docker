@@ -6,7 +6,6 @@ RUN apt-get install apt-transport-https
 RUN echo "deb https://apt.dockerproject.org/repo debian-jessie main" >> /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get -y --force-yes install docker-engine
-USER jenkins
 
 ADD docker-entrypoint.sh /docker-entrypoint.sh
 

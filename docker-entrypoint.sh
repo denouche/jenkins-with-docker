@@ -17,7 +17,7 @@ then
     groupmod --gid $DOCKER_GROUP_ID docker
 fi
 
-su - jenkins
+su jenkins <<EOF
 /bin/tini -- /usr/local/bin/jenkins.sh
-
+EOF
 
