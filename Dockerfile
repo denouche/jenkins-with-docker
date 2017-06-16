@@ -8,4 +8,9 @@ RUN apt-get update
 RUN apt-get -y --force-yes install docker-engine
 USER jenkins
 
+ADD docker-entrypoint.sh /docker-entrypoint.sh
+
+ENTRYPOINT [ "/docker-entrypoint.sh" ]
+
+CMD [ "/bin/bash" ]
 
